@@ -1,6 +1,6 @@
 <?php
     $host='localhost';
-    $db = 'task_bd';
+    $db = 'task_db';
     $username = 'postgres';
     $password = 'qwerty';
 
@@ -65,7 +65,7 @@ foreach($employees as $id => $arr)
 
     $selectRes = pg_query($dbconn, $query2);
 
-    echo "\t\t<h2>task2</h2>\n";
+    echo "\t\t<h2>1</h2>\n";
 
     echo "<table>\n";
     while ($line = pg_fetch_array($selectRes, null, PGSQL_ASSOC)) {
@@ -85,7 +85,7 @@ foreach($employees as $id => $arr)
 
     $selectRes2 = pg_query($dbconn, $query3);
 
-    echo "\t\t<h2>task3</h2>\n";
+    echo "\t\t<h2>2</h2>\n";
 
     echo "<table>\n";
     while ($line = pg_fetch_array($selectRes2, null, PGSQL_ASSOC)) {
