@@ -4,5 +4,7 @@ class MySingleton {
 
     private function __construct() {}
 
+    protected function __clone() { }
+
 }
 ?>
