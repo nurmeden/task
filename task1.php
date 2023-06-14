@@ -18,5 +18,7 @@ class MySingleton {
     }
 }
 
+$singleton = MySingleton::getInstance();
+$singleton->hello();
 
 ?>
