@@ -18,7 +18,15 @@ class MySingleton {
     }
 }
 
-$singleton = MySingleton::getInstance();
-$singleton->hello();
-
+function clientCode()
+{
+    $s1 = MySingleton::getInstance();
+    $s2 = MySingleton::getInstance();
+    if ($s1 === $s2) {
+        echo "Singleton works, both variables contain the same instance.";
+    } else {
+        echo "Singleton failed, variables contain different instances.";
+    }
+}
+ echo clientCode()
 ?>
