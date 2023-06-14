@@ -13,5 +13,10 @@ class MySingleton {
         return self::$instance;
     }
 
+    public function hello() {
+        echo "Hello\n";
+    }
 }
+
+
 ?>
