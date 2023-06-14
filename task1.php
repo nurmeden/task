@@ -4,7 +4,14 @@ class MySingleton {
 
     private function __construct() {}
 
-    protected function __clone() { }
+    protected function __clone() {}
+
+    public static function getInstance() {
+        if (!self::$instance) {
+            self::$instance = new self();
+        }
+        return self::$instance;
+    }
 
 }
 ?>
