@@ -20,11 +20,11 @@ function buildCommentTree($comments) {
         }
         }
 
-    $html = buildCommentTrees($commentMap);
+    $html = GenerateHtml($commentMap);
     return $html;
 }
 
-function buildCommentTrees($comments) {
+function GenerateHtml($comments) {
 $html = '<ul>';
     foreach ($comments as $comment) {
     $id = $comment[0];
@@ -34,7 +34,7 @@ $html = '<ul>';
 
     $html .= '<li>' . $text;
         if (!empty($childComments)) {
-        $html .= buildCommentTrees($childComments);
+        $html .= GenerateHtml($childComments);
         }
         $html .= '</li>';
     }
